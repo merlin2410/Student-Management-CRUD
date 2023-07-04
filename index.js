@@ -13,25 +13,32 @@ const students = [];
 let sId = 1;
 
 function addStudent(){
-    let obj = {
-        id: sId,
-        name: nameField.value,
-        age: ageField.value,
-        grade: gradeField.value,
-        degree: degreeField.value,
-        email: emailField.value
-    }
-    
-    students.push(obj);
-    renderTable(obj);
 
-    nameField.value = "";
-    ageField.value = "";
-    gradeField.value = "";
-    degreeField.value = "";
-    emailField.value = "";
-    
-    sId++;
+    if(nameField.value===""){
+        nameField.style.border="1px solid red";
+    }
+    else{
+        let obj = {
+            id: sId,
+            name: nameField.value,
+            age: ageField.value,
+            grade: gradeField.value,
+            degree: degreeField.value,
+            email: emailField.value
+        }
+        
+        students.push(obj);
+        renderTable(obj);
+
+        nameField.value = "";
+        ageField.value = "";
+        gradeField.value = "";
+        degreeField.value = "";
+        emailField.value = "";
+        
+        nameField.style.border = "1px solid white";
+        sId++;
+    }
 }
 
 function renderTable(obj){
