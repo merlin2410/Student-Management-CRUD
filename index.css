@@ -43,6 +43,21 @@
     font-weight: 500;
 }
 
+.form-section button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+#editButton{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#editButton:hover{
+    background-color: rgb(65, 62, 62);
+}
+
 .form-section input{
     width: 400px;
     height: 40px;
@@ -87,4 +102,8 @@
     height: 40px;
     padding: 5px;
     padding-left: 10px;
+}
+
+.delete-entry:hover, .edit-entry:hover{
+    cursor: pointer;
 }

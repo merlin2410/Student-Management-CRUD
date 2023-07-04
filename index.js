@@ -47,9 +47,9 @@ function renderTable(obj){
                         <td>${obj.email}</td>
                         <td>${obj.age}</td>
                         <td>${obj.grade}</td>
-                        <td style="display: flex; justify-content: space-between; align-items:center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined" id="${editId}" onclick = "editStudents(${obj.id})">
+                        <td style="display: flex; justify-content: space-between; align-items:center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined edit-entry" id="${editId}" onclick = "editStudents(${obj.id})">
                         edit_square
-                        </span> <span class="material-symbols-outlined" id="${deleteId}" onclick="deleteStudent(${obj.id})">
+                        </span> <span class="material-symbols-outlined delete-entry" id="${deleteId}" onclick="deleteStudent(${obj.id})">
                         delete
                         </span></div></td>
                         `
@@ -64,9 +64,9 @@ function renderTable(obj){
                         <td>${obj.email}</td>
                         <td>${obj.age}</td>
                         <td>${obj.grade}</td>
-                        <td style="display: flex; justify-content: space-between; align-items: center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined" id="${editId}" onclick = "editStudents(${obj.id})">
+                        <td style="display: flex; justify-content: space-between; align-items: center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined edit-entry" id="${editId}" onclick = "editStudents(${obj.id})">
                         edit_square
-                        </span> <span class="material-symbols-outlined" id="${deletId}" onclick="deleteStudent(${obj.id})">
+                        </span> <span class="material-symbols-outlined delete-entry" id="${deletId}" onclick="deleteStudent(${obj.id})">
                         delete
                         </span></div></td>
                         
@@ -156,12 +156,15 @@ function saveData(){
                     <td>${obj.email}</td>
                     <td>${obj.age}</td>
                     <td>${obj.grade}</td>
-                    <td style="display: flex; justify-content: space-between; align-items:center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined" id="${editId}" onclick = "editStudents(${obj.id})">
+                    <td style="display: flex; justify-content: space-between; align-items:center;"><div>${obj.degree}</div><div><span class="material-symbols-outlined edit-entry" id="${editId}" onclick = "editStudents(${obj.id})">
                     edit_square
-                    </span> <span class="material-symbols-outlined" id="${deleteId}" onclick="deleteStudent(${obj.id})">
+                    </span> <span class="material-symbols-outlined delete-entry" id="${deleteId}" onclick="deleteStudent(${obj.id})">
                     delete
                     </span></div></td>
-                    `
+                    `;
+    submit.style.display="block";
+    editButton.style.display = "none";
+    editButton.className = "";
 }
 
 function deleteStudent(id){
@@ -174,7 +177,7 @@ function deleteStudent(id){
             key = i;
         }
     }
-    delete students[key];
+    students.splice(key,1);
 }
 
 
