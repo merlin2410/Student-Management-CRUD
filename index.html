@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="assets/student.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <main class="main-container">
+        <h1>Student Management CRUD</h1>
+        <div class="form-section" id="form-section">
+            
+            <form>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="number" name="gpa" id="grade" placeholder="GPA" required>
+                <input type="number" name="age" id="age" placeholder="Age" required>
+                <input type="text" name="degree" id="degree" placeholder="Degree" required> 
+            </form>
+            <button type="submit" form="add-student" id="submit" onclick="addStudent()" style="display:block">Add Student</button>
+            <button type="submit" form="add-student" id="editButton" onclick="saveData()" style="display:none">Edit Student</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="search" placeholder="Search by Name, Email or Degree" name="search" id="search">
+        </div>
+
+        <div class="table-section">
+            <table class="student-table" id="student-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>GPA</th>
+                        <th>Degree</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                   <tr id="row1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                   </tr>
+                   <tr id="row2">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                   </tr>
+                   <tr id="row3">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                   </tr>
+                   <tr id="row4">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                   </tr>
+                   <tr id="row5">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
